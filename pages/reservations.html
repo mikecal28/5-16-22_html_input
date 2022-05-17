@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0 0 0 0;
+      }
+      .navbar {
+        position: relative;
+        right: 40%;
+        bottom: 180px;
+      }
+      .hero-section {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        background-image: url("../assets/images/fabrizio-conti-k6GpdsPJSZw-unsplash.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .hero-section .hero-text {
+        text-align: center;
+        color: white;
+        font-size: xx-large;
+      }
+      .hero-section .navbar {
+        text-align: center;
+        color: white;
+        font-size: large;
+      }
+      .reservation-form {
+        padding-top: 30px;
+        margin-left: 39.5%;
+        background-image: url("../assets/images/40-409334_rounded-rectangle-outline-rounded-rectangle-no-background.png");
+        background-size: 400px 530px;
+        background-repeat: no-repeat;
+      }
+      .page-description {
+        text-align: center;
+      }
+      .reservation-form h2 {
+        text-decoration: underline;
+        margin-left: 12%;
+      }
+      .reservation-form .form-container {
+        margin: 3.5% 0% 0% 7%;
+      }
+      .reservation-form .form-item {
+        margin: 0px 0px 10px 0px;
+      }
+      .reservation-form .field-last-name {
+        margin: 0px 0px 0px 2px;
+      }
+      .reservation-form .field-email {
+        margin: 0px 0px 0px 33px;
+      }
+      .reservation-form .field-phone {
+        margin: 0px 0px 0px 31px;
+      }
+      .reservation-form .field-start-date {
+        margin: 0px 0px 0px 21px;
+      }
+      .reservation-form .field-end-date {
+        margin: 0px 0px 0px 25px;
+      }
+      .reservation-form .radio-option {
+        margin: 0px 0px 0px 15px;
+        position: relative;
+        bottom: 20px;
+        left: 90px;
+      }
+      .reservation-form .field-luggage-yes {
+        margin: 3px 15px 0px 0px;
+      }
+      .reservation-form .field-luggage-no {
+        margin: 3px 15px 0px 0px;
+      }
+      .reservation-form .field-rental-car {
+        margin: 3px 15px 0px 0px;
+      }
+      .reservation-form .field-rental-boat {
+        margin: 3px 15px 0px 0px;
+      }
+      .reservation-form .field-rental-atv {
+        margin: 3px 15px 0px 0px;
+      }
+      footer {
+        margin-top: 25vh;
+        margin-left: 5vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero-section">
+      <header class="navbar">
+        <a href="../index.html">Home</a>
+        Reservations
+      </header>
+      <h1 class="hero-text">Make a Reservation</h1>
+    </div>
+    <div class="page-description">
+      <p>Fill out the following form to book your trip:</p>
+    </div>
+    <div class="reservation-form">
+      <h2>Reservation</h2>
+      <form
+        action="https://httpbin.org/post"
+        method="post"
+        class="form-container"
+      >
+        <div class="form-item">
+          <label for="first-name">First Name: </label>
+          <input
+            class="field-first-name"
+            name="first-name"
+            type="text"
+            required
+          />
+        </div>
+        <div class="form-item">
+          <label for="last-name">Last Name: </label>
+          <input
+            class="field-last-name"
+            name="last-name"
+            type="text"
+            required
+          />
+        </div>
+        <div class="form-item">
+          <label for="email">Email: </label>
+          <input class="field-email" name="email" type="text" required />
+        </div>
+        <div class="form-item">
+          <label for="phone">Phone: </label>
+          <input class="field-phone" name="phone" type="text" />
+        </div>
+        <div class="form-item">
+          <label for="start-date">Start Date: </label>
+          <input
+            class="field-start-date"
+            name="start-date"
+            type="date"
+            required
+          />
+        </div>
+        <div class="form-item">
+          <label for="end-date">End Date: </label>
+          <input class="field-end-date" name="end-date" type="date" required />
+        </div>
+        <div class="form-item">
+          Luggage?
+          <div class="radio-option">
+            <label for="luggage">Yes</label>
+            <input
+              class="field-luggage-yes"
+              name="luggage"
+              type="radio"
+              value="yes"
+            />
+
+            <label for="luggage">No</label>
+            <input
+              class="field-luggage-no"
+              name="luggage"
+              type="radio"
+              value="no"
+              checked
+            />
+          </div>
+        </div>
+        <div class="form-item">
+          <select name="group-size" required>
+            <option value="" hidden>Group Size</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <h4>Choose Your Rentals:</h4>
+          <input name="rentals" type="hidden" value="" checked />
+
+          <label for="Car">Car </label>
+          <input
+            class="field-rental-car"
+            name="rentals"
+            type="checkbox"
+            value="car"
+          />
+
+          <label for="boat">Boat </label>
+          <input
+            class="field-rental-boat"
+            name="rentals"
+            type="checkbox"
+            value="boat"
+          />
+
+          <label for="atv">ATV </label>
+          <input
+            class="field-rental-atv"
+            name="rentals"
+            type="checkbox"
+            value="atv"
+          />
+        </div>
+        <div class="submit-button">
+          <br />
+          <button>Submit</button>
+          <br />
+          <br />
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <a href="https://www.google.com">Google Search</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!-- Assigment 5/16/2022 -->
+<!-- Website with a Home page that contains some placeholder description -->
+<!-- Reservation page to "book" a trip -->
+<!-- 
+Home:
+- Navbar
+- Footer
+- Hero content (banner image specifically)
+- Main Header
+- Page content the describes your site
+- Link to a reservation form page
+-->
+<!--
+  Reservations:
+- Navbar
+- Footer
+- Hero content
+- Main Header
+- Page content the describes your site
+- Web form
+  - email
+  - first, last
+  - phone
+  - start date, end date
+  - 2 radio buttons
+  - 3 checkboxes
+  - Something needs to be required (you choose which fields make sense)
+  - submit button
+  - hit that same api "https://httpbin.org/post" and have it echo your fields
+  - 1 select dropdown
+-->
+<!-- HAVE FUN WITH IT -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0 15px 0 0;
+      }
+      .navbar {
+        position: relative;
+        right: 40%;
+        bottom: 180px;
+      }
+      .hero-section {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        background-image: url("./assets/images/fabrizio-conti-k6GpdsPJSZw-unsplash.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .hero-section .hero-text {
+        text-align: center;
+        color: white;
+        font-size: xx-large;
+      }
+      .hero-section .navbar {
+        text-align: center;
+        color: white;
+        font-size: large;
+      }
+      .page-description {
+        text-align: center;
+        list-style-position: inside;
+      }
+      footer {
+        margin-top: 25vh;
+        margin-left: 5vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero-section">
+      <header class="navbar">
+        Home
+        <a href="./pages/reservations.html">Reservations</a>
+      </header>
+      <h1 class="hero-text">Welcome</h1>
+    </div>
+    <div class="page-description">
+      <h2>Mike's Website</h2>
+      <ul>
+        <li>
+          Use the links at the top of the page to move around the site.
+        </li>
+        <li>
+          You may use the "Reservations" link to make a reservation.
+        </li>
+      </ul>
+      </p>
+    </div>
+
+    <footer>
+      <a href="https://www.google.com">Google Search</a>
+    </footer>
+  </body>
+</html>
