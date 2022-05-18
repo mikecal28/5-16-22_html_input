@@ -39,8 +39,12 @@ Home:
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Project - Home</title>
     <style>
-      body {
-        margin: 0 15px 0 0;
+      html {
+        overflow-x: hidden;
+        margin-right: calc(-1 * (100vw - 100%));
+      }
+     body {
+        margin: 0 0 0 0;
       }
       .navbar {
         position: relative;
@@ -70,6 +74,7 @@ Home:
         list-style-position: inside;
       }
       footer {
+        position: fixed;
         margin-top: 25vh;
         margin-left: 5vw;
       }
