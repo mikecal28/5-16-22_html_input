@@ -38,6 +38,7 @@ Home:
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Project - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
       html {
         overflow-x: hidden;
@@ -48,9 +49,10 @@ Home:
         margin: 0 0 0 0;
       }
       .navbar {
-        position: relative;
-        right: 40%;
-        bottom: 180px;
+        position: fixed;
+        top: 0px;
+        background-color: rgb(209, 216, 234, 0.5);
+        padding: 5px 15px;
       }
       .hero-section {
         padding-top: 200px;
@@ -76,8 +78,9 @@ Home:
       }
       footer {
         position: fixed;
-        margin-top: 25vh;
-        margin-left: 5vw;
+        bottom: 10px;
+        left: calc(100vw - 3%);
+        font-size: 1.5em;
       }
     </style>
   </head>
@@ -103,7 +106,9 @@ Home:
     </div>
 
     <footer>
-      <a href="https://www.google.com">Google Search</a>
+      <a href="https://www.google.com">
+        <i class="fa-brands fa-google"></i>
+      </a>
     </footer>
   </body>
 </html>
